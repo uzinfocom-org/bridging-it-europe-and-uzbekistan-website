@@ -1,26 +1,111 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #000000;
+  --foreground: #ffffff;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: LandingFont, Arial, Helvetica, sans-serif;
+}
+
+.text-stroke {
+  text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
+}
+
+@font-face {
+  font-family: "LandingFont";
+  src: url("/fonts/Light.eot"); /* IE9 Compat Modes */
+  src:
+    url("/fonts/Light.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("/fonts/Light.woff") format("woff"),
+    /* Modern Browsers */ url("/fonts/Light.woff2") format("woff2"),
+    /* Modern Browsers */ url("/fonts/Light.ttf") format("truetype"); /* Safari, Android, iOS */
+  font-style: normal;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: "LandingFont";
+  src: url("/fonts/Regular.eot"); /* IE9 Compat Modes */
+  src:
+    url("/fonts/Regular.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("/fonts/Regular.woff") format("woff"),
+    /* Modern Browsers */ url("/fonts/Regular.woff2") format("woff2"),
+    /* Modern Browsers */ url("/fonts/Regular.ttf") format("truetype"); /* Safari, Android, iOS */
+  font-style: normal;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: "LandingFont";
+  src: url("/fonts/Medium.eot"); /* IE9 Compat Modes */
+  src:
+    url("/fonts/Medium.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("/fonts/Medium.woff") format("woff"),
+    /* Modern Browsers */ url("/fonts/Medium.woff2") format("woff2"),
+    /* Modern Browsers */ url("/fonts/Medium.ttf") format("truetype"); /* Safari, Android, iOS */
+  font-style: normal;
+  font-weight: 500;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: "LandingFont";
+  src: url("/fonts/SemiBold.eot"); /* IE9 Compat Modes */
+  src:
+    url("/fonts/SemiBold.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("/fonts/SemiBold.woff") format("woff"),
+    /* Modern Browsers */ url("/fonts/SemiBold.woff2") format("woff2"),
+    /* Modern Browsers */ url("/fonts/SemiBold.ttf") format("truetype"); /* Safari, Android, iOS */
+  font-style: normal;
+  font-weight: 600;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: "LandingFont";
+  src: url("/fonts/Bold.eot"); /* IE9 Compat Modes */
+  src:
+    url("/fonts/Bold.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("/fonts/Bold.woff") format("woff"),
+    /* Modern Browsers */ url("/fonts/Bold.woff2") format("woff2"),
+    /* Modern Browsers */ url("/fonts/Bold.ttf") format("truetype"); /* Safari, Android, iOS */
+  font-style: normal;
+  font-weight: 700;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: "LandingFont";
+  src: url("/fonts/ExtraBold.eot"); /* IE9 Compat Modes */
+  src:
+    url("/fonts/ExtraBold.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("/fonts/ExtraBold.woff") format("woff"),
+    /* Modern Browsers */ url("/fonts/ExtraBold.woff2") format("woff2"),
+    /* Modern Browsers */ url("/fonts/ExtraBold.ttf") format("truetype"); /* Safari, Android, iOS */
+  font-style: normal;
+  font-weight: 800;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: "LandingFont";
+  src: url("/fonts/Black.eot"); /* IE9 Compat Modes */
+  src:
+    url("/fonts/Black.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("/fonts/Black.woff") format("woff"),
+    /* Modern Browsers */ url("/fonts/Black.woff2") format("woff2"),
+    /* Modern Browsers */ url("/fonts/Black.ttf") format("truetype"); /* Safari, Android, iOS */
+  font-style: normal;
+  font-weight: 900;
+  text-rendering: optimizeLegibility;
 }
