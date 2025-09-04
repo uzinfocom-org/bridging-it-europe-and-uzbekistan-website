@@ -24,7 +24,7 @@ export const Countdown: React.FC<{ target: Date }> = ({ target }) => {
   });
 
   return (
-    <p className="mx-auto text-6xl text-white font-medium bg-black/40 px-3 py-1 rounded-2xl">
+    <p className="mx-auto text-4xl md:text-6xl text-white font-medium bg-black/40 px-3 py-1 rounded-2xl">
       {[days, hours, minutes, seconds].map((n, i) => (
         <React.Fragment key={i}>
           {i != 0 ? <>&nbsp;:&nbsp;</> : ""}

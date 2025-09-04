@@ -26,7 +26,7 @@ export const HeaderSection: React.FC = () => {
       </header>
       <div className="absolute overflow-hidden">
         <Image
-          className="mt-[200px] mx-auto mix-blend-screen scale-[2] w-full pointer-events-none"
+          className="mt-36 md:mt-[200px] mx-auto mix-blend-screen scale-[2] w-full pointer-events-none"
           src="/infinity-background.png"
           alt="Infinity backgound"
           width={1221}
@@ -34,8 +34,8 @@ export const HeaderSection: React.FC = () => {
         />
       </div>
       <section className="relative z-10 container mx-auto flex flex-col">
-        <div className="flex justify-between mb-14">
-          <div className="w-56">
+        <div className="flex flex-wrap justify-center lg:justify-between mb-14 gap-6 lg:gap-0">
+          <div className="text-center lg:text-left w-56 xl:ml-16">
             <div className="border border-[#20152F] rounded-4xl p-6 w-56">
               <h2 className="font-bold text-3xl mb-4">Digital Art House</h2>
               <h3 className="text-[#AEA2FF] text-lg">
@@ -43,7 +43,8 @@ export const HeaderSection: React.FC = () => {
               </h3>
             </div>
           </div>
-          <div className="overflow-hidden">
+          <div className="w-full lg:hidden" />
+          <div className="w-[420px] scale-50 lg:scale-100">
             <div
               className="relative mb-8 mx-auto w-[416px] h-[52px] mask-no-repeat pointer-events-none"
               style={{ maskImage: `url(${bridgingMask.src})` }}
@@ -79,8 +80,9 @@ export const HeaderSection: React.FC = () => {
               </span>
             </div>
           </div>
-          <div className="w-56 text-right">
-            <div className="border border-[#20152F] rounded-4xl p-6 w-40">
+          <div className="w-full lg:hidden" />
+          <div className="lg:w-40 text-center lg:text-right lg:mr-16">
+            <div className="border border-[#20152F] rounded-4xl p-6 w-40 ml-auto">
               <h2 className="text-8xl font-medium">8</h2>
               <h3 className="text-[#AEA2FF] text-2xl font-bold">
                 October

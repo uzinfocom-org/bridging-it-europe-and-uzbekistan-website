@@ -16,7 +16,7 @@ export const CeoQuoteSection: React.FC = () => {
             />
           </div>
         </div>
-        <div className="text-5xl text-center">
+        <div className="text-3xl lg:text-5xl text-center">
           “Technology is about building bridges, not walls. True innovation
           comes when people from different worlds connect, share knowledge, and
           create something greater together.”
@@ -33,8 +33,8 @@ export const CeoQuoteSection: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="inline-flex mx-auto items-center gap-4">
-        <div className="inline-flex rounded-full p-px bg-linear-to-r from-[#9E92C4] via-[#035ACA] to-[#61D4DA]">
+      <div className="inline-flex mx-auto items-center gap-4 px-12">
+        <div className="inline-flex shrink-0 rounded-full p-px bg-linear-to-r from-[#9E92C4] via-[#035ACA] to-[#61D4DA]">
           <Image
             className="pointer-events-none rounded-full border-4 border-black"
             src="/ceo.jpg"

@@ -5,7 +5,7 @@ import { SponsorshipCard } from "./sponsorship-card";
 
 export const SponsorshipPackagesSection: React.FC = () => {
   return (
-    <section className="relative container mx-auto z-10 mb-16">
+    <section className="relative container mx-auto z-10 mb-16 px-6">
       <Heading lines text="Sponsorship Packages" className="mb-8" />
       <p className="w-2/3 mx-auto text-center text-xl font-medium text-[#AEA2FF] mb-14">
         Boost your brand visibility and meet decision-makers from Europe and
@@ -30,26 +30,26 @@ export const SponsorshipPackagesSection: React.FC = () => {
           title="General Sponsor"
           subtitle="Exclusive top-tier visibility across stage, media wall, website, and program."
           label="Apply as General Sponsor"
-          link=""
+          link="#register"
         />
         <SponsorshipCard
           title="Official Sponsor"
           subtitle="Branding at check-in desks, badges, and attendee communications."
           label="Apply as Official Sponsor"
-          link=""
+          link="#register"
         />
         <SponsorshipCard
           className="lg:col-span-2"
           title="Representative Sponsor"
           subtitle="Co-branding across press releases, photo/video content, and social media."
           label="Apply as Representative Sponsor"
-          link=""
+          link="#register"
         />
         <SponsorshipCard
           title="Title Sponsor"
           subtitle="Co-branding across press releases and social media."
           label="Apply as Title Sponsor"
-          link=""
+          link="#register"
         />
       </div>
     </section>

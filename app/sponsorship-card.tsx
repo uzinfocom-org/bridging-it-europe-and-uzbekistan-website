@@ -18,7 +18,9 @@ export const SponsorshipCard: React.FC<{
     >
       <h5 className="text-4xl font-bold">{title}</h5>
       <p className="font-medium text-[#AEA2FF] my-6 flex-1">{subtitle}</p>
-      <Button component="a">{label}</Button>
+      <Button component="a" href={link}>
+        {label}
+      </Button>
     </div>
   );
 };

@@ -19,6 +19,10 @@ export default function Button<
 >(props: TT) {
   const className = cn(
     "inline-flex bg-gradient-to-b from-[#AF69ED] to-[#3A166D] rounded-3xl py-2 px-3",
+    "disabled:opacity-50 text-center",
+    {
+      "cursor-pointer": props.component == "button",
+    },
     props.className,
   );
 

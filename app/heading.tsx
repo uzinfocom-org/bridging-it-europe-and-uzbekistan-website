@@ -12,10 +12,13 @@ export const Heading: React.FC<{
       className={cn(
         "flex-1",
         lines
-          ? cn("h-px from-[##9E92C4] via-[#035ACA] to-[#61D4DA]", {
-            "bg-linear-to-r": flip,
-            "bg-linear-to-l": !flip,
-          })
+          ? cn(
+            "hidden md:block h-px from-[##9E92C4] via-[#035ACA] to-[#61D4DA]",
+            {
+              "bg-linear-to-r": flip,
+              "bg-linear-to-l": !flip,
+            },
+          )
           : "",
       )}
     />

@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "clsx": "^2.1.1",
+    "google-auth-library": "^10.3.0",
+    "google-spreadsheet": "^5.0.2",
     "next": "15.5.2",
     "react": "19.1.0",
     "react-countdown": "^2.3.6",
@@ -25,5 +27,8 @@
     "@types/react-dom": "^19",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }

@@ -5,8 +5,9 @@ import Image from "next/image";
 import { Heading } from "./heading";
 import Button from "./button";
 import cn from "./cn";
+import { saveToSpreadsheets } from "./registration-function";
 
-const types = [
+export const types = [
   { value: "attendee", label: "Attendee" },
   { value: "speaker", label: "Speaker" },
   { value: "general-sponsor", label: "General Sponsor" },
@@ -19,13 +20,21 @@ export const RegistrationSection: React.FC = () => {
   const [isPending, startTransition] = React.useTransition();
   const [successful, setSuccessful] = React.useState(false);
 
-  const submitAction = async () => {
-    startTransition(async () => { });
+  const submitAction = async (formData: FormData) => {
+    startTransition(async () => {
+      try {
+        await saveToSpreadsheets(formData);
+      } catch (e) {
+        console.error(e);
+      } finally {
+        setSuccessful(true);
+      }
+    });
   };
   return (
     <section
       id="register"
-      className="container mx-auto mb-24 p-20 border border-[#20152F] rounded-4xl lg:grid lg:grid-cols-2 gap-6"
+      className="container mx-auto mb-24 p-6 lg:p-20 border border-[#20152F] rounded-4xl lg:grid lg:grid-cols-2 gap-6"
     >
       <div>
         <Heading alignLeft text="Registration" className="mb-8" />
@@ -44,30 +53,57 @@ export const RegistrationSection: React.FC = () => {
           )}
         >
           <div className="relative flex flex-col gap-3">
-            <input type="text" maxLength={256} placeholder="Full Name" />
             <input
+              name="fullName"
+              type="text"
+              maxLength={256}
+              placeholder="Full Name"
+              required
+            />
+            <input
+              name="companyPosition"
               type="text"
               maxLength={256}
               placeholder="Company / Position"
+              required
             />
-            <input type="text" maxLength={256} placeholder="Email / Phone" />
-            <input type="text" maxLength={256} placeholder="Country" />
-            <select>
+            <input
+              name="emailPhone"
+              type="text"
+              maxLength={256}
+              placeholder="Email / Phone"
+              required
+            />
+            <input
+              name="country"
+              type="text"
+              maxLength={256}
+              placeholder="Country"
+              required
+            />
+            <select name="type">
               {types.map(({ value, label }) => (
                 <option key={value} value={value}>
                   {label}
                 </option>
               ))}
             </select>
+            {isPending && (
+              <div className="absolute inset-0 bg-black flex flex-col gap-4 items-center justify-center">
+                Sending data. Please be patient.
+              </div>
+            )}
             {successful && (
               <div className="absolute inset-0 bg-black flex flex-col gap-4 items-center justify-center">
                 Successfully sent. Thank you!
-                <Button component="button">Try again</Button>
+                <Button component="button" onClick={() => setSuccessful(false)}>
+                  Send one more
+                </Button>
               </div>
             )}
           </div>
-          <div className="flex gap-3 mt-10">
-            <Button component="button" type="submit">
+          <div className="flex gap-3 mt-10 flex-col md:flex-row">
+            <Button component="button" type="submit" disabled={isPending}>
               Register Now
             </Button>
             <Button component="a">Download Agenda (PDF)</Button>

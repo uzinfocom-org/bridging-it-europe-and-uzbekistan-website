@@ -3,9 +3,9 @@ import { Heading } from "./heading";
 
 export const ContactsSection: React.FC = () => {
   return (
-    <footer className="container mx-auto pb-16">
+    <footer className="container mx-auto pb-16 px-6">
       <Heading lines text="Contacts" className="mb-8" />
-      <div className="flex gap-6">
+      <div className="flex flex-wrap gap-6">
         <div className="flex flex-col gap-6">
           <div className="[&_a]:text-[#AEA2FF] rounded-4xl p-6 border border-[#20152F] bg-[#0F0A14]/60">
             <h5 className="text-2xl font-bold mb-1">Victoria Kuznetsova</h5>
