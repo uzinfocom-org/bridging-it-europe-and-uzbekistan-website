@@ -1,0 +1,52 @@
+{
+  "morningSession": [
+    {
+      "time": "11:30",
+      "title": "Registration & Welcome Coffee"
+    },
+    {
+      "time": "12:30",
+      "title": "Forum Opening & Welcome Remarks"
+    },
+    {
+      "time": "13:00",
+      "title": "Uzinfocom Europe Presentation",
+      "subtitle": "Speaker: Viktoria Dubova"
+    },
+    {
+      "time": "13:30",
+      "title": "Uzinfocom Capabilities & Vision",
+      "subtitle": "Speaker: Umid Sunnatjonov"
+    }
+  ],
+  "daySession": [
+    {
+      "time": "14:00",
+      "title": "Coffee Break",
+      "subtitle": "(option for sponsor presentation)"
+    },
+    {
+      "time": "15:00",
+      "title": "Technical Overview & Advantages of Uzinfocom",
+      "subtitle": "Speaker: Timur Batirov"
+    },
+    {
+      "time": "15:30",
+      "title": "Q&A Session",
+      "subtitle": "(with potential partner slot)"
+    },
+    {
+      "time": "16:00",
+      "title": "Panel Discussion with Partners",
+      "subtitle": "Speaker: Umid Sunnatjonov"
+    },
+    {
+      "time": "16:30",
+      "title": "Closing Session"
+    },
+    {
+      "time": "17:00",
+      "title": "Networking Dinner & Buffet"
+    }
+  ]
+}
