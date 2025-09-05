@@ -11,7 +11,7 @@ export const SponsorshipPackagesSection: React.FC = () => {
         Boost your brand visibility and meet decision-makers from Europe and
         Central Asia. Choose a package and apply online.
       </p>
-      <div className="grid lg:grid-cols-4 lg:grid-rows-2 gap-5">
+      <div className="grid lg:grid-cols-3 lg:grid-rows-2 gap-5">
         <div className="relative lg:row-span-2 flex flex-col gap-2 justify-between">
           <h4 className="relative z-10 text-4xl font-bold">What we offer:</h4>
           <p className="relative z-10 font-medium text-[#AEA2FF]">
@@ -39,7 +39,6 @@ export const SponsorshipPackagesSection: React.FC = () => {
           link="#register"
         />
         <SponsorshipCard
-          className="lg:col-span-2"
           title="Representative Sponsor"
           subtitle="Co-branding across press releases, photo/video content, and social media."
           label="Apply as Representative Sponsor"
