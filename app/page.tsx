@@ -8,10 +8,12 @@ import { HeaderSection } from "./header-section";
 import { LetterSection } from "./letter-section";
 import { RegistrationSection } from "./registration-section";
 import { SponsorshipPackagesSection } from "./sponsorship-packages-section";
+import { ClientOnly } from "./client-only";
 
 const HomePage: React.FC = () => {
   return (
     <div className="overflow-hidden">
+      <ClientOnly />
       <HeaderSection />
       <EventOverviewSection />
       <AgendaSection />
