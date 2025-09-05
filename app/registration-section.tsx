@@ -114,9 +114,9 @@ export const RegistrationSection: React.FC = () => {
             >
               Download Agenda (PDF)
             </Button>
-            <Button component="a" variant="secondary">
-              Request Sponsor Kit
-            </Button>
+            {/* <Button component="a" variant="secondary"> */}
+            {/*   Request Sponsor Kit */}
+            {/* </Button> */}
           </div>
         </form>
       </div>
