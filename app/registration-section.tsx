@@ -106,7 +106,12 @@ export const RegistrationSection: React.FC = () => {
             <Button component="button" type="submit" disabled={isPending}>
               Register Now
             </Button>
-            <Button component="a" variant="secondary">
+            <Button
+              component="a"
+              href="/agenda.pdf"
+              target="_blank"
+              variant="secondary"
+            >
               Download Agenda (PDF)
             </Button>
             <Button component="a" variant="secondary">
