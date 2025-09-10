@@ -44,6 +44,14 @@ export const RegistrationSection: React.FC = () => {
         <h3 className="text-4xl font-medium mb-5">Attendee Information</h3>
         <form
           action={submitAction}
+          onSubmit={() => {
+            // @ts-ignore
+            window?.lintrk?.("track", {
+              conversion_id: parseInt(
+                process.env.NEXT_PUBLIC_LINKEDIN_REGISTER_CONVERSION_ID ?? "",
+              ),
+            });
+          }}
           className={cn(
             "[&_input,&_select]:border",
             "[&_input,&_select]:border-[#A588B5]/50",

@@ -6,7 +6,10 @@ import { AgendaTime } from "./agenda-time";
 
 export const AgendaSection: React.FC = () => {
   return (
-    <section className="relative container mx-auto mt-36 mb-20 z-10 px-8 lg:px-0">
+    <section
+      className="relative container mx-auto mt-36 mb-20 z-10 px-8 lg:px-0"
+      id="agenda"
+    >
       <Heading lines text="Agenda" className="mb-16" />
 
       <div className="grid md:grid-cols-3 gap-6">
