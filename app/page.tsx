@@ -9,12 +9,14 @@ import { LetterSection } from "./letter-section";
 import { RegistrationSection } from "./registration-section";
 import { SponsorshipPackagesSection } from "./sponsorship-packages-section";
 import { ClientOnly } from "./client-only";
+import { OfficialPartnerSection } from "./official-partner-section";
 
 const HomePage: React.FC = () => {
   return (
     <div className="overflow-hidden">
       <ClientOnly />
       <HeaderSection />
+      <OfficialPartnerSection />
       <EventOverviewSection />
       <AgendaSection />
       <div className="relative">

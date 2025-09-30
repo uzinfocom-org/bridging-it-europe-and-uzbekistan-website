@@ -2,9 +2,13 @@ import React from "react";
 import Image from "next/image";
 import { Heading } from "./heading";
 import agendaTexts from "./agenda.json";
-import { AgendaTime } from "./agenda-time";
+import { AgendaTime as AgendaItem } from "./agenda-item";
 
 export const AgendaSection: React.FC = () => {
+  const breakIndex = agendaTexts.findIndex((text) => text.type == "break")
+  const texts1 = agendaTexts.slice(0, breakIndex)
+  const texts2 = agendaTexts.slice(breakIndex + 1)
+
   return (
     <section
       className="relative container mx-auto mt-36 mb-20 z-10 px-8 lg:px-0"
@@ -14,9 +18,8 @@ export const AgendaSection: React.FC = () => {
 
       <div className="grid md:grid-cols-3 gap-6">
         <div className="flex flex-col gap-8">
-          <h3 className="text-4xl font-bold">Morning Session</h3>
-          {agendaTexts.morningSession.map((details, index) => (
-            <AgendaTime key={index} {...details} />
+          {texts1.map((details, index) => (
+            <AgendaItem key={index} {...details} />
           ))}
         </div>
         <Image
@@ -27,9 +30,8 @@ export const AgendaSection: React.FC = () => {
           height={479}
         />
         <div className="flex flex-col gap-8">
-          <h3 className="text-4xl font-bold">Day Session</h3>
-          {agendaTexts.daySession.map((details, index) => (
-            <AgendaTime key={index} {...details} />
+          {texts2.map((details, index) => (
+            <AgendaItem key={index} {...details} />
           ))}
         </div>
       </div>
