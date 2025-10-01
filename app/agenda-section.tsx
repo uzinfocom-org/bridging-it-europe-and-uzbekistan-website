@@ -39,19 +39,19 @@ export const AgendaSection: React.FC = () => {
       className="relative container mx-auto mt-36 mb-20 z-10 px-8 lg:px-0"
       id="agenda"
     >
-      <h1 className="text-8xl font-bold mb-16">Event Program</h1>
+      <h1 className="text-4xl lg:text-8xl font-bold mb-16">Event Program</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
-        <div className="md:col-span-2 text-[#FEBCFF]/50 bg-[#FEBCFF]/5 px-2.5 py-3.5">
+        <div className="hidden md:block md:col-span-2 text-[#FEBCFF]/50 bg-[#FEBCFF]/5 px-2.5 py-3.5">
           Time
         </div>
-        <div className="md:col-span-5 text-[#FEBCFF]/50 bg-[#FEBCFF]/5 px-2.5 py-3.5">
+        <div className="hidden md:block md:col-span-4 text-[#FEBCFF]/50 bg-[#FEBCFF]/5 px-2.5 py-3.5">
           Event
         </div>
-        <div className="md:col-span-5 text-[#FEBCFF]/50 bg-[#FEBCFF]/5 px-2.5 py-3.5">
+        <div className="hidden md:block md:col-span-6 text-[#FEBCFF]/50 bg-[#FEBCFF]/5 px-2.5 py-3.5">
           Speaker / Details
         </div>
-        <div className="md:col-span-12 h-5" />
+        <div className="hidden md:block md:col-span-12 h-5" />
         {agenda.map((agenda, index) => <React.Fragment key={index}>
           {index != 0 && <div className="bg-[image:var(--line-gradient)] md:col-span-12 h-px my-6 md:my-2" />}
           <div className="md:col-span-2">
@@ -62,10 +62,10 @@ export const AgendaSection: React.FC = () => {
               {agenda.end}
             </div>
           </div>
-          <div className="md:col-span-5">
+          <div className="md:col-span-4">
             <RenderText text={agenda.text} />
           </div>
-          <div className="md:col-span-5 flex gap-6 flex-wrap">
+          <div className="md:col-span-6 flex gap-6 flex-wrap">
             {agenda.speakers.map((speaker, index) => (
               <RenderSpeaker key={index} speaker={speaker} />
             ))}
