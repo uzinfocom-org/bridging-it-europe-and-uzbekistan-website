@@ -32,7 +32,7 @@ const timurRakhmanov: Speaker = {
 const aliaksandrPiatrou: Speaker = {
   type: "person",
   name: "Aliaksandr Piatrou",
-  title: "Head of the Europa, UZINFOCOM EUROPE"
+  title: "Chairman of the board, UZINFOCOM EUROPE"
 }
 
 const viktoriayaDubova: Speaker = {
