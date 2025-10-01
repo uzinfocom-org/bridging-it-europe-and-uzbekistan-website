@@ -36,7 +36,7 @@ const RenderSpeaker: React.FC<{ speaker: Speaker }> = ({ speaker }) => {
 export const AgendaSection: React.FC = () => {
   return (
     <section
-      className="relative container mx-auto mt-36 mb-20 z-10 px-8 lg:px-0"
+      className="relative container mx-auto mt-36 mb-20 z-10 px-8"
       id="agenda"
     >
       <h1 className="text-4xl lg:text-8xl font-bold mb-16">Event Program</h1>
