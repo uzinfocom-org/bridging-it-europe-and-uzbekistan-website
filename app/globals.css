@@ -3,6 +3,7 @@
 :root {
   --background: #000000;
   --foreground: #ffffff;
+  --line-gradient: linear-gradient(90deg,rgba(158, 146, 196, 1) 0%, rgba(3, 90, 202, 1) 25%, rgba(119, 160, 236, 1) 50%, rgba(181, 222, 241, 1) 75%, rgba(97, 212, 218, 1) 100%);
 }
 
 html {
