@@ -14,6 +14,16 @@
     flake-utils.lib.eachDefaultSystem (system: let
       pkgs = import nixpkgs {inherit system;};
     in {
-      devShells.default = pkgs.mkShell {nativeBuildInputs = with pkgs; [nodejs];};
+      formatter = pkgs.alejandra;
+
+      devShells.default = pkgs.mkShell {
+        nativeBuildInputs = with pkgs; [
+          nixd
+          alejandra
+          statix
+          deadnix
+          nodejs
+        ];
+      };
     });
 }
