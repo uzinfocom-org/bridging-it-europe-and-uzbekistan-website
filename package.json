@@ -13,7 +13,7 @@
     "clsx": "^2.1.1",
     "google-auth-library": "^10.3.0",
     "google-spreadsheet": "^5.0.2",
-    "next": "15.5.7",
+    "next": "15.5.8",
     "nextjs-google-analytics": "^2.3.7",
     "react": "19.1.0",
     "react-countdown": "^2.3.6",
